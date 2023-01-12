@@ -1,18 +1,18 @@
-import { Header } from '../components/Header'
-import { Login } from '../components/Login'
-import './global.css'
-import styles from './App.module.css'
+import { Header } from "../components/Header";
+import { Login } from "../components/Login";
+import "./global.css";
+import styles from "./App.module.css";
 
 function App() {
 
-  return (
-    <div className={ styles.app }>
-<Header />
+	return (
+		<div className={ styles.app }>
+			<Header />
 
-<Login /> 
+			<Login /> 
     
-    </div>
-  )
+		</div>
+	);
 }
 
-export default App
+export default App;
