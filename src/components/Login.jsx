@@ -23,12 +23,15 @@ export function Login() {
 
 			<div className={ styles.checkbox }>
 				<input type="checkbox" />
-                Manter-me logado.
+                Manter-me logado.				
+			</div>
+
+			<div className={ styles.changePassword }>				
+				<a href="">Esqueceu sua senha?</a>
 			</div>
 
 			<div className={ styles.button }>
-				<input type="submit" value={"Logar"} />
-                
+				<input type="submit" value={"Logar"} />                
 			</div>
 
         
