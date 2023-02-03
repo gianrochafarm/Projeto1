@@ -1,15 +1,23 @@
+import {useState, useEffect} from "React";
 import "../home/global.css";
 import styles from "./Login.module.css";
-
 export function Login() {	
+	const [email, setEmail] = useState("");
 	
-	
-	
+	const handleChangeEmail = (e) => {
+		setEmail(e);
+	};
 
+	const applyForm = () => {
+		if (email.length === 0 ) return (alert("Email vazio"));
+		if (!email.includes("@")) return alert("Email fora dos padrões");
+			
+		return alert("Usuário foi logado");
+	};
 
 	return (
 
-		<form className={ styles.form }>
+		<form className={ styles.form } onSubmit={applyForm}>
 
 			<div className={ styles.login}>
 				<h1>Login</h1>
@@ -18,8 +26,11 @@ export function Login() {
 			<div className={ styles.email }>
 				<p>Seu e-mail:</p>
 				<input 
-					type="email" 
-					name='Seu email:' 
+					value={email}
+					// type="email" 
+					name='Seu email:'
+					placeholder='Digite seu email aqui'
+					onChange={(event) => handleChangeEmail(event.target.value)} 
 					size={25}
 					
 								
@@ -51,11 +62,9 @@ export function Login() {
 					type="submit" 
 					value={"Logar"}
 					
-
 				/>                
 			</div>
 
-        
 		</form>
 	);
 }
