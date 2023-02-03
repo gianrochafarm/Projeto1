@@ -7,20 +7,23 @@
     align-items: center;
     background: #f7f7f7;
     border-radius: 5px;
+    margin-top: 8rem;
         
 }
 
 
 .login {
+  display: flex;
+  justify-content: center;
+  width: 15rem;
   line-height: 3rem;
   border-bottom: 1px solid #000;
-  margin-bottom: 1rem ;
+  margin-bottom: 2rem ;
 
 }
 
 .input {
-        margin-bottom: 1rem; 
-   
+        margin-bottom: 1rem;    
     
  }
 
@@ -31,13 +34,14 @@
  }
 
  .checkbox {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     width: 15rem;
     
  }
 
  .checkbox input {
   margin-right: 0.5rem;
+  cursor: pointer;
  }
 
 .button input {
@@ -46,12 +50,18 @@
     background: #4ccbd9;
     transition: 0.1s;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button input:hover {
   background: #119ed6;
 }
 
+.changePassword {
+  width: 15rem;
+  margin-bottom: 1rem;
+  animation: none;
+}
     
 
 
