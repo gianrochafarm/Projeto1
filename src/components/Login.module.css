@@ -22,16 +22,24 @@
 
 }
 
-.input {
-        margin-bottom: 1rem;    
-    
+.email {
+        margin-bottom: 1rem;     
  }
 
- .input input {
+ .email input {
     width: 15rem;
     border-radius: 5px;
-
  }
+
+ .senha {
+  margin-bottom: 1rem;
+ }
+
+ .senha input {
+  width: 15rem;
+  border-radius: 5px;
+}
+
 
  .checkbox {
     margin-bottom: 1rem;
@@ -60,7 +68,15 @@
 .changePassword {
   width: 15rem;
   margin-bottom: 1rem;
-  animation: none;
+}
+
+.changePassword a {
+  color: #000;  
+  transition: 0.1s;
+}
+
+.changePassword a:hover {
+  color:#119ed6;
 }
     
 
