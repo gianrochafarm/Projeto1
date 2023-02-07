@@ -5,10 +5,7 @@ import "../home/global.css";
 import styles from "./Login.module.css";
 export function Login() {	
 	const [email, setEmail] = useState("");
-	
-	const handleChangeEmail = (e) => {
-		setEmail(e);
-	};
+
 
 	//localStorage.setItem => Coloca um valor para uma variável no localStorage
 	//localStorage.getItem => Retorna o valor salvo de uma varíavel no localStorage
@@ -17,7 +14,9 @@ export function Login() {
 	const applyForm = () => {
 		if (email.length === 0 ) return (alert("Email vazio"));
 		if (!email.includes("@")) return alert("Email fora dos padrões");
-			
+		// 8 e 24  caracteres
+		// se possui pelo menos 1 numero
+		// se possui pelo menos 1 letra maiscula
 		
 		localStorage.setItem("goiaba", email);
 
