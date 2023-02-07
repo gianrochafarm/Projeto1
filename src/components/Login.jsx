@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/react-in-jsx-scope */
 import {useState, useEffect} from "React";
 import "../home/global.css";
 import styles from "./Login.module.css";
@@ -8,12 +10,24 @@ export function Login() {
 		setEmail(e);
 	};
 
+	//localStorage.setItem => Coloca um valor para uma variável no localStorage
+	//localStorage.getItem => Retorna o valor salvo de uma varíavel no localStorage
+	//localStorage.removeItem => Apaga o valor de uma variável no localStorage
+
 	const applyForm = () => {
 		if (email.length === 0 ) return (alert("Email vazio"));
 		if (!email.includes("@")) return alert("Email fora dos padrões");
 			
-		return alert("Usuário foi logado");
+		
+		localStorage.setItem("goiaba", email);
+
 	};
+
+	const pegaUsuarioLogado = () => {
+		const temUsuarioLogado = localStorage.getItem("email-projeto1");
+		return alert(temUsuarioLogado);
+	};
+	
 
 	return (
 
@@ -53,7 +67,7 @@ export function Login() {
                 Manter-me logado.				
 			</div>
 
-			<div className={ styles.changePassword }>				
+			<div onClick={pegaUsuarioLogado} className={ styles.changePassword }>				
 				<a href="">Esqueceu sua senha?</a>
 			</div>
 
