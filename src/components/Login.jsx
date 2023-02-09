@@ -5,6 +5,8 @@ import styles from "./Login.module.css";
 
 export function Login() {	
 
+	
+
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -15,7 +17,7 @@ export function Login() {
 	const handleChangePassword = (e) => {
 		setPassword(e);
 	}
-
+	
 	//  console.log(password);
 	//  console.log(password.search(/[A-Z]/))
 	//  console.log(password.search(/[a-z]/))
@@ -31,7 +33,7 @@ export function Login() {
 		if (password.search(/[a-z]/) < 0) return alert('Sua senha precisa de ao menos uma letra minúscula.');
 		if (password.search(/[0-9]/) < 0) return alert('Sua senha precisa de ao menos um número.');
 		if (password.search(/[\W]/) < 0) return alert('Sua senha precisa de ao menos um caracter especial.');
-		return alert('OK');
+		return localStorage.setItem('Email',email);
 	}
 
 	return (
