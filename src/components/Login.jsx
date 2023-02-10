@@ -7,16 +7,19 @@ export function Login() {
 
 	
 
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [errorEmail, setErrorEmail] = useState("");
+	const [errorPassword, setErrorPassword] = useState("");
 
 	const handleChangeEmail = (e) => {
 		setEmail(e);
-	}
+		setErrorEmail("");
+	};
 
 	const handleChangePassword = (e) => {
 		setPassword(e);
-	}
+	};
 	
 	//  console.log(password);
 	//  console.log(password.search(/[A-Z]/))
@@ -25,20 +28,23 @@ export function Login() {
 	//  console.log(password.search(/[\W]/))
 	 
 
-	const aplyForm = () => {
-		if (email.length === 0) return alert('Preencha o campo email.');
-		if (!email.includes('@')) return alert('Email fora dos padrões.');
-		if (password.length === 0) return alert('Preencha o campo senha.');
-		if (password.search(/[A-Z]/) < 0) return alert('Sua senha precisa de ao menos uma letra maiúscula.');
-		if (password.search(/[a-z]/) < 0) return alert('Sua senha precisa de ao menos uma letra minúscula.');
-		if (password.search(/[0-9]/) < 0) return alert('Sua senha precisa de ao menos um número.');
-		if (password.search(/[\W]/) < 0) return alert('Sua senha precisa de ao menos um caracter especial.');
-		return localStorage.setItem('Email',email);
-	}
+	const aplyForm = (e) => {
+		e.preventDefault();
+		if (email.length === 0) return setErrorEmail("Preencha o campo email.");
+		if (!email.includes("@")) return setErrorEmail("Email fora dos padrões.");
+		if (password.length === 0) return setErrorPassword("Preencha o campo senha.");
+		if (password.search(/[A-Z]/) < 0) return setErrorPassword("Sua senha precisa de ao menos uma letra maiúscula.");
+		if (password.search(/[a-z]/) < 0) return setErrorPassword("Sua senha precisa de ao menos uma letra minúscula.");
+		if (password.search(/[0-9]/) < 0) return setErrorPassword("Sua senha precisa de ao menos um número.");
+		if (password.search(/[\W]/) < 0) return setErrorPassword("Sua senha precisa de ao menos um caracter especial.");
+		 localStorage.setItem("Email",email);
+		
+		
+	};
 
 	return (
 
-		<form className={ styles.form } onSubmit={aplyForm}>
+		<form className={ styles.form } onSubmit={(e) => aplyForm(e)}>
 
 			<div className={ styles.login}>
 				<h1>Login</h1>
@@ -56,6 +62,8 @@ export function Login() {
 				/>
 
 			</div>
+			{/* {errorEmail ? <span style={{color: "red"}}>{errorEmail}</span> : null} */}
+			{errorEmail && <span style={{color: "red"}}>{errorEmail}</span>}
 
 			<div className={ styles.senha }>
 				<p>Sua senha:</p>
@@ -68,6 +76,8 @@ export function Login() {
 									
 				/>
 			</div>
+			
+
 
 			<div className={ styles.checkbox }>
 				<input type="checkbox" />
