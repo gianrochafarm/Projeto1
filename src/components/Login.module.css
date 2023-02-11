@@ -79,5 +79,23 @@
   color:#119ed6;
 }
     
+.errorAlert {
+  width: 15rem;
+  color: #e61919;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
 
+.errorEmail input {
+  width: 15rem;
+  border-radius: 5px;
+  border-bottom: solid #e61919 ;
+}
+
+.errorPassWord input {
+  width: 15rem;
+  border-radius: 5px;
+  border-bottom: solid #e61919 ;
+}
 
