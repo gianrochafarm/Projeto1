@@ -39,7 +39,9 @@ export function Login() {
 		if (password.search(/[a-z]/) < 0) return setErrorPassword('Sua senha precisa de ao menos uma letra minúscula.');
 		if (password.search(/[0-9]/) < 0) return setErrorPassword('Sua senha precisa de ao menos um número.');
 		if (password.search(/[\W]/) < 0) return setErrorPassword('Sua senha precisa de ao menos um caracter especial.');
-		return localStorage.setItem('Email',email);
+		window.location.reload();
+		return localStorage.setItem('Email',email);		
+
 	};
 
 	return (
