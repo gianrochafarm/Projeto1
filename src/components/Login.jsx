@@ -34,7 +34,7 @@ export function Login() {
 		e.preventDefault('');
 		if (email.length === 0) return setErrorEmail('Por favor, insira seu email.');
 		if (!email.includes('@')) return setErrorEmail('Email fora dos padrões.');
-		if (password.length === 0) return setErrorPassword('Preencha o campo senha.');
+		if (password.length === 0) return setErrorPassword('Por favor, insira sua senha.');
 		if (password.search(/[A-Z]/) < 0) return setErrorPassword('Sua senha precisa de ao menos uma letra maiúscula.');
 		if (password.search(/[a-z]/) < 0) return setErrorPassword('Sua senha precisa de ao menos uma letra minúscula.');
 		if (password.search(/[0-9]/) < 0) return setErrorPassword('Sua senha precisa de ao menos um número.');
@@ -92,7 +92,7 @@ export function Login() {
 				/>
 			</div> : 
 			
-			<div className={ styles.senha }>
+			<div className={ styles.password }>
 				<p>Sua senha:</p>
 				
 				<input  
