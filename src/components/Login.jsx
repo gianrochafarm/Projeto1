@@ -52,7 +52,7 @@ export function Login() {
 				<h1>Login</h1>
 			</div>
 
-			{errorEmail ? <div className={ styles.errorEmail }>
+			{errorEmail ? <div className={ styles.errorEmail }> 
 				<p>Seu e-mail:</p>
 
 				<input 
@@ -117,7 +117,7 @@ export function Login() {
 			</div>
 
 			<div className={ styles.changePassword }>				
-				<a href="">Esqueceu sua senha?</a>
+				<a href=""> Cadastre-se.</a>
 			</div>
 
 			<div className={ styles.button } >
