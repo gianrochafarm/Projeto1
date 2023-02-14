@@ -46,7 +46,7 @@ export function Login() {
 
 	return (
 
-		<form className={ styles.form } onSubmit={aplyForm}>
+		<form className={ styles.form } onSubmit={aplyForm} autoComplete='off'>
 
 			<div className={ styles.login}>
 				<h1>Login</h1>
