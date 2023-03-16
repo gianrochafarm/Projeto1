@@ -44,7 +44,7 @@ export default function TemporaryDrawer({setOptionSelected}) {
 			onKeyDown={toggleDrawer(anchor, false)}
 		>
 			<List>
-				{[ "Cadastrar cliente", "Clientes", "Agenda"].map((text, index) => (
+				{["Agenda", "Clientes", "Cadastrar cliente"].map((text, index) => (
 					<ListItem key={text} disablePadding onClick={()=> setOptionSelected(text)}>
 						<ListItemButton>
 							<ListItemIcon>
