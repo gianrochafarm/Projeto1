@@ -1,6 +1,8 @@
 import styles from "./Leads.module.css";
 
 export function Leads () {
+
+
     return (
         <div>            
         <form className={ styles.form } >
@@ -12,13 +14,18 @@ export function Leads () {
                 <input type="text" />
             </label>
             <label className={ styles.dados }>
-                <p>Endereço</p>
-                <input type="text" />
-            </label>
-            <label className={ styles.dados }>
                 <p>Número de Telefone</p>
                 <input type="text" />
             </label>
+            <label className={ styles.dados }>
+                <p>Endereço</p>
+                <input className={ styles.dados } placeholder="Cep" type="text" /> <br />
+                <input className={ styles.dados } placeholder="Rua, número e Bairro" type="text" /> <br />
+                <input className={ styles.dados } placeholder="Complemento" type="text" /> <br />
+                <input className={ styles.dados } placeholder="Cidade" type="text" /> <br />
+                <input className={ styles.dados } placeholder="Estado" type="text" /> <br />
+            </label>
+         
             <label className={ styles.dados }>
                 <p>Plano</p>
                 <select name="Escolha um plano" >
